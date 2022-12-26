@@ -1,7 +1,7 @@
 all:com sim
 
 com: 
-	vcs -debug_all ./tb/fifo_tb.v ./rtl/sync_fifo.v -l com.log
+	vcs -debug_all -f file.f -l com.log
 
 sim:
 	./simv -l sim.log
