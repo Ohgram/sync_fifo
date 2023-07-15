@@ -58,4 +58,9 @@ module fifo_tb ();
     initial begin
         $vcdpluson;
     end
+
+    initial begin
+    $fsdbDumpfile("tb.fsdb");
+    $fsdbDumpvars(0,"fifo_tb");
+    end
 endmodule
