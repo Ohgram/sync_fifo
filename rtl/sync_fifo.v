@@ -36,7 +36,7 @@ module sync_fifo(
 
     //empty
     assign empty=(w_addr==r_addr);
-    assign full=(w_addr[3:0]==r_addr[3:0])&&(w_addr[4]!=r_addr);
+    assign full=(w_addr[3:0]==r_addr[3:0])&&(w_addr[4]!=r_addr[4]);
     //w_addr
     always @(posedge clk or posedge reset) begin
         if(reset)

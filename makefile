@@ -1,7 +1,7 @@
 all:com sim
 
 com: 
-	vcs -debug_all -fsdb -sverilog -f file.f -l com.log
+	vcs -debug_all -fsdb -sverilog -f flist.f -l com.log
 
 sim:
 	./simv \
@@ -12,8 +12,8 @@ run:
 
 verdi:
 	verdi -sv \
-    -f file.f \
-    -top tb_top \
+    -f flist.f \
+    -top fifo_tb \
     -ssf tb.fsdb \
     -nologo &
 
